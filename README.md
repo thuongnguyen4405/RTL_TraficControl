@@ -39,27 +39,7 @@ A synchronous digital traffic light controller implemented in **Verilog HDL** us
 ---
 
 ## Architecture
-
-```
-                    ┌─────────────────────────────────────────────────────────┐
-                    │                    TOP MODULE                           │
-                    │                                                         │
-    ┌───────┐       │   ┌─────────────┐      ┌────────────────┐              │
-    │  CLK  │───────┼──►│   SECOND    │      │                │              │
-    │  RST  │───────┼──►│   COUNTER   │─────►│      FSM       │──────────────┼──► GREEN_LIGHT
-    │  EN   │───────┼──►│  (Prescaler)│      │   (Control)    │──────────────┼──► YELLOW_LIGHT
-    └───────┘       │   └──────┬──────┘      └───────┬────────┘──────────────┼──► RED_LIGHT
-                    │          │                     │                        │
-                    │          │ second_finish       │ light_second           │
-                    │          ▼                     ▼                        │
-                    │   ┌──────────────┐      ┌──────────────┐               │
-                    │   │    LIGHT     │◄─────│   COUNTER    │               │
-                    │   │   COUNTER    │      │   DECODER    │───────────────┼──► SEG_TENS[6:0]
-                    │   │  (Duration)  │─────►│  (Display)   │───────────────┼──► SEG_UNITS[6:0]
-                    │   └──────────────┘      └──────────────┘               │
-                    │                                                         │
-                    └─────────────────────────────────────────────────────────┘
-```
+<img width="1171" height="596" alt="image" src="https://github.com/user-attachments/assets/a523a790-6e4c-4f11-9657-794b62e97add" />
 
 ---
 
