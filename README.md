@@ -111,7 +111,7 @@ gtkwave --version
 
 ```bash
 # Clone repository
-git clone https://github.com/thuongnguyen4405/TimerIP.git
+git clone https://github.com/thuongnguyen4405/RTL_TrafficControl.git
 cd traffic_light_rtl
 
 # Compile and run simulation
