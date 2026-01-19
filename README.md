@@ -40,6 +40,7 @@ A synchronous digital traffic light controller implemented in **Verilog HDL** us
 
 ## Architecture
 <img width="1171" height="596" alt="image" src="https://github.com/user-attachments/assets/a523a790-6e4c-4f11-9657-794b62e97add" />
+<img width="1132" height="631" alt="image" src="https://github.com/user-attachments/assets/7ab73422-56c9-4b01-b974-c5d285fd186f" />
 
 ---
 
@@ -54,6 +55,11 @@ A synchronous digital traffic light controller implemented in **Verilog HDL** us
 | `counter_decoder` | Display path integrating BCD converter and 7-seg decoder       | clk, rst_n, count, seg             |
 | `decimal_split`   | Binary to BCD converter (tens and units digits)                | count, tens, units                 |
 | `hex2seg`         | BCD to 7-segment display encoder (active-high)                 | hex, en, seg                       |
+## Low Level of Block Design:
+<img width="1172" height="609" alt="image" src="https://github.com/user-attachments/assets/c55b136c-095a-40ea-a992-cb2136f4b727" />
+<img width="1133" height="633" alt="image" src="https://github.com/user-attachments/assets/de554baf-d227-4b1c-bbfb-792d36eee8c7" />
+<img width="1200" height="578" alt="image" src="https://github.com/user-attachments/assets/1144c30f-e1d3-4cf7-b532-d9d8f3a33868" />
+<img width="1114" height="675" alt="image" src="https://github.com/user-attachments/assets/21fb9e37-2891-4843-b4fe-be9721a29f66" />
 
 ---
 
@@ -171,6 +177,11 @@ gtkwave sim/wave.vcd
 2. **YELLOW State**: 3 seconds duration → `yellow_light = 1`
 3. **RED State**: 15 seconds duration → `red_light = 1`
 4. **Total Cycle**: 36 seconds per complete cycle
+### Expected Waveform for each module:
+<img width="1225" height="380" alt="image" src="https://github.com/user-attachments/assets/fdda1115-db01-47b8-abd4-9333bad6fd74" />
+<img width="1212" height="420" alt="image" src="https://github.com/user-attachments/assets/e13d4eef-3704-42aa-b161-3d0de5cc0d16" />
+<img width="1211" height="387" alt="image" src="https://github.com/user-attachments/assets/e830408c-9690-440c-9951-9aa11e2a9f77" />
+<img width="1217" height="630" alt="image" src="https://github.com/user-attachments/assets/ba735fcd-eed3-47b1-a737-408bbb9cd950" />
 
 ---
 
@@ -209,6 +220,9 @@ gtkwave sim/wave.vcd
 
 Segment Order: seg[6:0] = {g, f, e, d, c, b, a}
 ```
+Output Waveform: 
+<img width="1292" height="554" alt="image" src="https://github.com/user-attachments/assets/935056b6-98e9-4d33-9151-05f3cf835d6d" />
+<img width="1291" height="478" alt="image" src="https://github.com/user-attachments/assets/a286d79e-df16-41d0-a5a8-330b760774ea" />
 
 ---
 
